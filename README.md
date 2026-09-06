@@ -162,6 +162,12 @@ Vulnerability reports: see <https://kobel.app/.well-known/security.txt>
 (PGP key published, ed25519). A CycloneDX SBOM is maintained for both the Rust
 and the JavaScript components.
 
+## Questions
+
+Common questions — how to give ChatGPT access to local files, whether it is safe
+to let an assistant read your disk, how this differs from pointing a filesystem
+MCP server at a folder — are answered in [docs/FAQ.md](docs/FAQ.md).
+
 ## Links
 
 - Website — <https://kobel.app/en/>
