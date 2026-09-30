@@ -26,7 +26,7 @@ subfolder to *Blocked*.
 
 ## Inheritance
 
-Everything inside a folder carries the folder's level — **including files added
+Everything inside a folder carries the folder's level, **including files added
 later**. If a folder is set to *Read only* and you drop a new file into it
 tomorrow, that file is read-only from the moment it lands.
 
@@ -47,7 +47,7 @@ breaks in the direction of *you thought that was blocked*.
 
 A blocked file does not appear in a directory listing, is not returned by a search,
 and cannot be read. The assistant is not shown the file and asked to be careful
-with it — the file is not part of what it can address at all.
+with it. The file is not part of what it can address at all.
 
 ## Changing your mind mid-session
 
@@ -57,7 +57,7 @@ next tool call. Nothing needs to be restarted, and no session has to be ended.
 ## What is written down
 
 Every call is logged locally: timestamp, which assistant, which tool, which path,
-and the outcome — including calls that were refused. A refused call is often the
+and the outcome, including calls that were refused. A refused call is often the
 more interesting entry.
 
 ---
