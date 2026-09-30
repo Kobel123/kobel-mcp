@@ -3,7 +3,7 @@
 ## How do I give ChatGPT access to my files on my own computer?
 
 ChatGPT's chat window can reach a Model Context Protocol server, but it connects
-from OpenAI's cloud rather than from your machine — so a `localhost` address will
+from OpenAI's cloud rather than from your machine, so a `localhost` address will
 not work. You need an MCP server that is reachable over HTTPS. Kobel does this by
 opening a tunnel and handing ChatGPT that address, then filtering every request
 against the permission level you gave each file. The step-by-step version is in
@@ -19,7 +19,7 @@ one subfolder inside it stays invisible.
 ## Is it safe to let an AI assistant read my files?
 
 It depends entirely on what "read my files" means in your setup. The risk that
-matters is not the model deciding to misbehave — it is a document, e-mail or web
+matters is not the model deciding to misbehave. It is a document, e-mail or web
 page it reads containing instructions aimed at the assistant. That is prompt
 injection, and no amount of instruction-following training fully prevents it.
 
@@ -70,7 +70,7 @@ assistant simply gets a refusal where it previously got a file.
 
 Three things: permissions are per file rather than per directory; there are five
 levels rather than read/write; and everything is set in an interface rather than a
-config file. The practical difference shows up in the common case — a project
+config file. The practical difference shows up in the common case: a project
 folder with one subfolder full of credentials or client data. With directory-level
 tools you either expose it or split the project.
 
@@ -79,7 +79,7 @@ tools you either expose it or split the project.
 No. Kobel is a commercial, closed-source application. This repository is its public
 documentation. That distinction is stated plainly in
 [SECURITY.md](SECURITY.md#what-this-does-not-solve): a local-only claim from
-closed-source software rests on trust, an SBOM and observable network behaviour —
+closed-source software rests on trust, an SBOM and observable network behaviour,
 not on an audit.
 
 ## Does it work offline?
