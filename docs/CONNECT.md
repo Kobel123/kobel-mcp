@@ -1,17 +1,17 @@
 # Connecting an AI client
 
 Kobel is an ordinary MCP server, so any MCP client can talk to it. What differs
-between clients is *how* they reach it — and the important split is local versus
+between clients is *how* they reach it, and the important split is local versus
 remote.
 
-## Local versus remote — why ChatGPT is different
+## Local versus remote: why ChatGPT is different
 
 Most clients run on your machine and start the MCP server themselves. Kobel writes
 the entry into their configuration file, they launch it, done.
 
 ChatGPT's chat window does not work that way. **OpenAI connects to MCP servers from
 its own cloud, not from your device.** A `localhost` address is therefore not
-reachable for it — not as a bug, but by architecture. Kobel handles this by opening
+reachable for it. This is not a bug, it is the architecture. Kobel handles this by opening
 an HTTPS tunnel and giving ChatGPT the public address of that tunnel instead.
 
 This is the single most common source of confusion, so it is worth stating plainly:
@@ -22,13 +22,13 @@ ChatGPT chat window it goes through a tunnel.
 
 1. In Kobel, open **Connect AI** and choose Claude Desktop.
 2. Kobel writes the server entry into Claude's configuration.
-3. **Quit Claude Desktop completely and start it again** — it reads the
+3. **Quit Claude Desktop completely and start it again**. It reads the
    configuration only at launch. On Windows, closing the window is not enough;
    quit it from the tray icon, then open Claude Desktop again from the Start menu.
 4. In Claude, ask it to call a Kobel tool explicitly, for example
    *"list my root folders using kobel_list_root_folders"*.
 
-Do not ask an assistant *"do you have access to my files?"* — several clients have
+Do not ask an assistant *"do you have access to my files?"*. Several clients have
 file access of their own and will answer yes without ever touching Kobel. Always
 have it call a `kobel_` tool by name.
 
@@ -46,7 +46,7 @@ have it call a `kobel_` tool by name.
 Two things that reliably go wrong:
 
 - **An existing entry with the same name blocks the new one.** ChatGPT does not
-  allow the server URL of an existing entry to be changed — the "..." menu only
+  allow the server URL of an existing entry to be changed. The "..." menu only
   offers rename, describe, disconnect and delete. Delete the old entry first, or
   give the new one a different name.
 - **The tunnel address changes every time Kobel starts.** Since the URL of an
@@ -59,7 +59,7 @@ Codex has its own entry in Kobel, separate from ChatGPT, because it connects
 locally rather than through the tunnel. Kobel writes the TOML block for you.
 
 **Codex reads its configuration only at startup.** After adding the entry, quit
-Codex completely and start it again — otherwise it will not see Kobel. Then have it
+Codex completely and start it again, otherwise it will not see Kobel. Then have it
 call a `kobel_` tool by name to confirm.
 
 Newer builds also offer a **Plugins** area with Public / Personal tabs and an
@@ -75,7 +75,7 @@ you when a restart is required.
 
 Kobel ships templates for Qwen Code, Kimi, CodeBuddy, Trae, Cherry Studio, Chatbox,
 Roo Code, Warp and the ChatGPT desktop app. Anything else can be pointed at Kobel
-manually — it is a standard MCP server.
+manually, because it is a standard MCP server.
 
 ## Checking that it worked
 
